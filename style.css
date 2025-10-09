@@ -3,7 +3,7 @@ body {
     font-family:europa_grotesque, monospace;
     }
 
-#header {
+header {
     position: fixed;
     top: 0px;
     height: 20px;
