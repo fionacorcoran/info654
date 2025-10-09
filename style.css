@@ -39,6 +39,11 @@ table, td {
     border-style: solid;
     border-radius: 25%;
     } 
+.text-box {
+    border-width: 5px;
+    border-style: dashed;
+    border-color: #B0E0E5;
+}
 @font-face {
   font-family: europa_grotesque; 
   src: url(europa_grotesque.ttf); 
