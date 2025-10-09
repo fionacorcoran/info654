@@ -2,8 +2,12 @@ body {
     background-color: burlywood;
     font-family:europa_grotesque, monospace;
     }
+@font-face {
+  font-family: europa_grotesque; 
+  src: url(europa_grotesque.ttf); 
+    }
 img {
-    max-width: 100%;
+    max-width: 100%;    
     height: auto;
     }
 table, td {
