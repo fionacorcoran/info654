@@ -2,9 +2,19 @@ body {
     background-color: burlywood;
     font-family:europa_grotesque, monospace;
     }
+
+#header {
+    position: fixed;
+    top: 0px;
+    height: 20px;
+    width: 100%;
+    background: green;
+    }
 @font-face {
   font-family: europa_grotesque; 
   src: url(europa_grotesque.ttf); 
+  font-family:news_gothic;
+  src: url(news_gothic.otf);
     }
 img {
     max-width: 100%;    
