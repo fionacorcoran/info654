@@ -1,6 +1,7 @@
+<!--elements-->
 body {
     padding-top: 80px;
-    background-color: burlywood;
+    background-color: #DEB887;
     font-family:europa_grotesque, monospace;
     }
 
@@ -9,16 +10,9 @@ header {
     top: 0px;
     height: 80px;
     width: 100%;
-    background-color: green;
+    background-color: #87A4DE;
     }
-@font-face {
-  font-family: europa_grotesque; 
-  src: url(europa_grotesque.ttf); 
-    }
-@font-face {
-    font-family:news_gothic;
-    src: url(news_gothic.otf);
-}
+
 img {
     max-width: 100%;    
     height: auto;
@@ -27,6 +21,7 @@ table, td {
     border-collapse: separate;
     border-spacing: 20px;
     }
+<!--classes-->
 .icon_image {
     max-width: 100%;
     height: auto;
@@ -35,10 +30,20 @@ table, td {
     border-style: solid;
     border-radius: 10%;
     }   
- .medium-image {
+.medium-image {
     max-width: 800px;
     border: 10px;
     border-color: purple; 
     border-style: solid;
     border-radius: 25%;
     } 
+<!--ids-->
+<!--fonts-->
+@font-face {
+  font-family: europa_grotesque; 
+  src: url(europa_grotesque.ttf); 
+    }
+@font-face {
+    font-family:news_gothic;
+    src: url(news_gothic.otf); 
+    }   
