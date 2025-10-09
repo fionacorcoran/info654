@@ -1,4 +1,3 @@
-<!--elements-->
 body {
     padding-top: 80px;
     background-color: #DEB887;
@@ -21,7 +20,6 @@ table, td {
     border-collapse: separate;
     border-spacing: 20px;
     }
-<!--classes-->
 .icon_image {
     max-width: 100%;
     height: auto;
@@ -37,8 +35,6 @@ table, td {
     border-style: solid;
     border-radius: 25%;
     } 
-<!--ids-->
-<!--fonts-->
 @font-face {
   font-family: europa_grotesque; 
   src: url(europa_grotesque.ttf); 
