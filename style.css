@@ -1,7 +1,14 @@
 body {
-    background-color: red;
-}
+    background-color: antiquewhite;
+    }
 .icon_image {
     max-width: 200px;
     max-height: 200px;
-}
+    }   
+ .medium-image {
+    max-width: 800px;
+    border: 10px;
+    border-color: purple; 
+    border-style: solid;
+    border-radius: 25%;
+    }
