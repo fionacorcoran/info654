@@ -6,6 +6,9 @@ img {
     max-width: 100%;
     height: auto;
     }
+table, td {
+    border: 1px solid;
+    }
 .icon_image {
     max-width: 100%;
     height: auto;
