@@ -4,7 +4,6 @@ body {
     }
 
 #header {
-    display: block;
     position: fixed;
     top: 0px;
     height: 20px;
