@@ -14,12 +14,11 @@ body {
 @font-face {
   font-family: europa_grotesque; 
   src: url(europa_grotesque.ttf); 
-
+    }
 @font-face {
     font-family:news_gothic;
     src: url(news_gothic.otf);
 }
-    }
 img {
     max-width: 100%;    
     height: auto;
