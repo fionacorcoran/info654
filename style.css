@@ -1,4 +1,8 @@
+html {
+    padding: 0px;
+}
 body {
+    padding-left: 0px;
     padding-top: 80px;
     background-color: #DEB887;
     font-family:europa_grotesque, monospace;
