@@ -7,7 +7,7 @@ img {
     height: auto;
     }
 table, td {
-    border: 1px solid;
+    border-collapse: separate;
     }
 .icon_image {
     max-width: 100%;
