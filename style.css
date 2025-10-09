@@ -6,8 +6,8 @@ img {
     height: auto;
     }
 .icon_image {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 300px;
+    max-height: 300px;
     border: 10px;
     border-color: powderblue; 
     border-style: solid;
@@ -19,12 +19,4 @@ img {
     border-color: purple; 
     border-style: solid;
     border-radius: 25%;
-    }
-.row {
-  display: flex;
-    }
-
-.column {
-  flex: 33.33%;
-  padding: 5px;
-    }   
+    } 
