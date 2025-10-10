@@ -47,6 +47,7 @@ table, td {
     border-color: #B0E0E5;
     border-radius: 10%;
     background-color:#87A4DE;
+    padding: 10px;
 }
 @font-face {
   font-family: europa_grotesque; 
