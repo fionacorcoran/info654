@@ -43,6 +43,7 @@ table, td {
     border-width: 5px;
     border-style: dashed;
     border-color: #B0E0E5;
+    background-color:#87A4DE;
 }
 @font-face {
   font-family: europa_grotesque; 
