@@ -32,14 +32,14 @@ table, td {
     border-style: solid;
     border-radius: 10%;
     }   
-.medium-image {
+.medium_image {
     max-width: 800px;
     border: 10px;
     border-color: purple; 
     border-style: solid;
     border-radius: 25%;
     } 
-.text-box {
+.text_box {
     border-width: 5px;
     border-style: dashed;
     border-color: #B0E0E5;
