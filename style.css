@@ -23,7 +23,12 @@ p {
     color: #BB01FF;
 }
 h1 {
-   color: #BB01FF 
+    font-family: europa_grotesque, monospace;
+    color: #BB01FF 
+}
+h2 {
+    font-family: europa_grotesque, monospace;
+    color: #BB01FF 
 }
 img {
     max-width: 100%;    
@@ -50,6 +55,13 @@ table, td {
     } 
 .glow_text {
   color: #BB01FF;
+  text-shadow: 0 0 5px #6800FF,
+               0 0 10px #6800FF,
+               0 0 20px #1400FF,
+               0 0 30px #1400FF;
+}
+.glow_text_blue {
+  color: #1400FF;
   text-shadow: 0 0 5px #6800FF,
                0 0 10px #6800FF,
                0 0 20px #1400FF,
