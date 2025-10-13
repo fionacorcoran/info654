@@ -4,7 +4,7 @@ html {
 body {
     padding-left: 0px;
     padding-top: 80px;
-    background-color: #DEB887;
+    background-color: black;
     font-family:europa_grotesque, monospace;
     }
 
@@ -13,11 +13,15 @@ header {
     top: 0px;
     height: 80px;
     width: 100%;
-    background-color: #87A4DE;
+    background-color:black;
     text-align: center;
     }
 p {
     font-size: 30px;
+    color: #80FF01;
+}
+h1 {
+   color: #80FF01 
 }
 img {
     max-width: 100%;    
@@ -31,7 +35,7 @@ table, td {
     max-width: 100%;
     height: auto;
     border: 10px;
-    border-color: #B0E0E5; 
+    border-color:#80FF01; 
     border-style: solid;
     border-radius: 10%;
     }   
@@ -42,6 +46,7 @@ table, td {
     border-style: solid;
     border-radius: 25%;
     } 
+/*
 .text_box {
     border-width: 10px;
     border-style: dashed;
@@ -49,6 +54,7 @@ table, td {
     background-color:#87A4DE;
     padding: 10px;
 }
+*/
 @font-face {
   font-family: europa_grotesque; 
   src: url(europa_grotesque.ttf); 
