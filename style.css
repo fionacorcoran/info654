@@ -29,6 +29,13 @@ h2 {
     font-family: europa_grotesque, monospace;
     color: #BB01FF 
 }
+a {
+  color: #FF2D00;
+  text-shadow: 0 0 5px #FF2D00,
+               0 0 10px #FF2D00,
+               0 0 20px #1400FF,
+               0 0 30px #1400FF;
+}
 img {
     max-width: 100%;    
     height: auto;
@@ -68,7 +75,7 @@ table, td {
 }
 .text_box {
     border-width: 10px;
-    border-style: inset;
+    border-style: ridge;
     border-color: #BB01FF;
     padding: 10px;
 }
