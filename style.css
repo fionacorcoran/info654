@@ -79,6 +79,16 @@ table, td {
     border-color: #BB01FF;
     padding: 10px;
 }
+.glow_box {
+    border-width: 10px;
+    border-style: ridge;
+    border-color: #BB01FF;
+    box-shadow: 0 0 5px #6800FF,
+                0 0 10px #6800FF,
+                0 0 20px #1400FF,
+                0 0 30px #1400FF;
+    padding: 10px;
+}
 
 @font-face {
   font-family: europa_grotesque; 
