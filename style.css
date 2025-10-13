@@ -46,6 +46,13 @@ table, td {
     border-style: solid;
     border-radius: 25%;
     } 
+.glow_text {
+  color: #80FF01;
+  text-shadow: 0 0 5px #80FF01,
+               0 0 10px #80FF01,
+               0 0 20px #47FF01,
+               0 0 30px #47FF01;
+}
 /*
 .text_box {
     border-width: 10px;
