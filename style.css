@@ -19,7 +19,6 @@ header {
     text-align: center;
     }
 p {
-    font-size:20px;
     color: #BB01FF;
 }
 h1 {
@@ -67,23 +66,13 @@ table, td {
                0 0 20px #1400FF,
                0 0 30px #1400FF;
 }
-/*
-.glow_text {
-  color: #80FF01;
-  text-shadow: 0 0 5px #80FF01,
-               0 0 10px #80FF01,
-               0 0 20px #47FF01,
-               0 0 30px #47FF01;
-}
-
 .text_box {
     border-width: 10px;
-    border-style: dashed;
+    border-style: inset;
     border-color: #B0E0E5;
-    background-color:#87A4DE;
     padding: 10px;
 }
-*/
+
 @font-face {
   font-family: europa_grotesque; 
   src: url(europa_grotesque.ttf); 
