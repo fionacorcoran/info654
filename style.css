@@ -50,7 +50,7 @@ table, td {
     height: auto;
     border: 10px;
     border-color:#BB01FF; 
-    box-shadow: 0 0 50px 5px #1400FF;
+    box-shadow: 0 0 25px 5px #1400FF;
     border-style: ridge;
     border-radius: 10%;
     }   
