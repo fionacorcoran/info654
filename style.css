@@ -48,11 +48,11 @@ table, td {
     border-radius: 25%;
     } 
 .glow_text {
-  color: #BB01FF;
-  text-shadow: 0 0 5px #BB01FF,
-               0 0 10px #BB01FF,
-               0 0 20px #6800FF,
-               0 0 30px #6800FF;
+  color: #6800FF;
+  text-shadow: 0 0 5px #6800FF,
+               0 0 10px #6800FF,
+               0 0 20px #BB01FF,
+               0 0 30px #BB01FF;
 }
 /*
 .glow_text {
