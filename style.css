@@ -49,7 +49,7 @@ table, td {
     height: auto;
     border: 10px;
     border-color:#BB01FF; 
-    box-shadow: 0 0 50px 15px #1400FF;
+    box-shadow: 0 0 50px 10px #1400FF;
     border-style: ridge;
     border-radius: 10%;
     }   
@@ -84,7 +84,7 @@ table, td {
     border-width: 10px;
     border-style: ridge;
     border-color: #BB01FF;
-    box-shadow: 0 0 50px 15px #1400FF;
+    box-shadow: 0 0 50px 10px #1400FF;
     padding: 10px;
 }
 
