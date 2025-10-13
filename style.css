@@ -47,13 +47,21 @@ table, td {
     border-radius: 25%;
     } 
 .glow_text {
+  color: #BB01FF;
+  text-shadow: 0 0 5px #BB01FF,
+               0 0 10px #BB01FF,
+               0 0 20px #B701FF,
+               0 0 30px #D501FF;
+}
+/*
+.glow_text {
   color: #80FF01;
   text-shadow: 0 0 5px #80FF01,
                0 0 10px #80FF01,
                0 0 20px #47FF01,
                0 0 30px #47FF01;
 }
-/*
+
 .text_box {
     border-width: 10px;
     border-style: dashed;
