@@ -18,10 +18,10 @@ header {
     }
 p {
     font-size: 30px;
-    color: #80FF01;
+    color: #BB01FF;
 }
 h1 {
-   color: #80FF01 
+   color: #BB01FF 
 }
 img {
     max-width: 100%;    
@@ -35,7 +35,7 @@ table, td {
     max-width: 100%;
     height: auto;
     border: 10px;
-    border-color:#80FF01; 
+    border-color:#BB01FF; 
     border-style: solid;
     border-radius: 10%;
     }   
