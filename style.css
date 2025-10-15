@@ -19,10 +19,15 @@ body {
     font-size: 25px;
     text-align: center;
     }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+}
+thead {
+    background-color:#BB01FF;
+    color: #000000;
 }
 th, td  {
     border: 1px solid #BB01FF;
