@@ -27,10 +27,11 @@ table {
 }
 thead {
     background-color:#BB01FF;
+    border: 2px solid #000000;
     color: #000000;
 }
-th, td  {
-    border: 1px solid #BB01FF;
+td  {
+    border: 2px solid #BB01FF;
     padding: 10px;
 }
 
