@@ -27,7 +27,6 @@ table {
 }
 thead {
     background-color:#BB01FF;
-    border: 2px solid #000000;
     color: #000000;
 }
 td  {
@@ -66,6 +65,7 @@ caption {
 #nav_table {
     border-collapse: separate;
     border-spacing: 20px;
+    border: 0px;
     }
 .center {
   margin-left: auto;
