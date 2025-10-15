@@ -30,11 +30,13 @@ thead {
     background-color:#BB01FF;
     color: #000000;
 }
-td  {
+td {
     border: 1px solid #BB01FF;
     padding: 10px;
 }
-
+.nav_tr {
+    border-color:black;
+}
 p {
     color: #BB01FF;
 }
