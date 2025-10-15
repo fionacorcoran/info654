@@ -19,7 +19,7 @@ body {
     font-size: 25px;
     text-align: center;
     }
-#panda_table {
+table, tr, td {
     border: 1px solid #BB01FF;
     border-collapse: collapse;
 
