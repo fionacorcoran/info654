@@ -35,7 +35,7 @@ td {
     padding: 10px;
 }
 .nav_td {
-    border-color:black;
+    border:1px solid black;
 }
 p {
     color: #BB01FF;
@@ -72,7 +72,6 @@ caption {
     width: 100%;
     border-collapse: separate;
     border-spacing: 20px;
-    border-color:black;
     }
 .center {
   margin-left: auto;
