@@ -66,6 +66,7 @@ caption {
     caption-side: bottom;
     padding-top: 10px;
     font-family: europa_grotesque, monospace;
+    font-size: 20px;
 }
 
 #nav_table {
