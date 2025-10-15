@@ -20,7 +20,7 @@ body {
     text-align: center;
     }
 
-table, th, td  {
+th, td  {
     border: 1px solid #BB01FF;
     border-collapse: collapse;
     padding: 10px;
