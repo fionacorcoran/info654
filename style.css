@@ -65,7 +65,7 @@ caption {
 #nav_table {
     border-collapse: separate;
     border-spacing: 20px;
-    border: 0px;
+    border: 1px solid black;
     }
 .center {
   margin-left: auto;
