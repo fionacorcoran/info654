@@ -51,6 +51,9 @@ img {
     max-width: 100%;    
     height: auto;
     }
+caption {
+    caption-side: bottom;
+}
 #nav_table {
     border-collapse: separate;
     border-spacing: 20px;
