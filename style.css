@@ -22,6 +22,7 @@ body {
 
 table {
     border: 1px solid #BB01FF;
+    align: center;
 }
 th, td {
     border-collapse: collapse;
