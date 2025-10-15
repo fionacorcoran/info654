@@ -9,7 +9,7 @@ body {
     color: #BB01FF;
     }
 
-header {
+#header {
     position: fixed;
     top: 0px;
     height: 80px;
@@ -37,6 +37,9 @@ a {
                0 0 20px #1400FF,
                0 0 30px #1400FF;
 }
+ul {
+    list-style-type: square;
+    }
 img {
     max-width: 100%;    
     height: auto;
