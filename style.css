@@ -20,11 +20,12 @@ body {
     text-align: center;
     }
 
-table, th, td {
+table {
     border: 1px solid #BB01FF;
+}
+th, td {
     border-collapse: collapse;
     padding: 10px;
-
 }
 p {
     color: #BB01FF;
