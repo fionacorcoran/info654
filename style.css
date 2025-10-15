@@ -19,6 +19,11 @@ body {
     font-size: 25px;
     text-align: center;
     }
+#panda_table {
+    border: 1px solid #BB01FF;
+    border-collapse: collapse;
+
+}
 p {
     color: #BB01FF;
 }
@@ -57,13 +62,6 @@ table, td {
     border-style: ridge;
     border-radius: 10%;
     }   
-.medium_image {
-    max-width: 800px;
-    border: 10px;
-    border-color: purple; 
-    border-style: solid;
-    border-radius: 25%;
-    } 
 .glow_text {
   color: #BB01FF;
   text-shadow: 0 0 5px #6800FF,
@@ -71,13 +69,7 @@ table, td {
                0 0 20px #1400FF,
                0 0 30px #1400FF;
 }
-.glow_text_orange {
-  color: #FF2D00;
-  text-shadow: 0 0 5px #FF2D00,
-               0 0 10px #FF2D00,
-               0 0 20px #1400FF,
-               0 0 30px #1400FF;
-}
+
 .text_box {
     border-width: 10px;
     border-style: ridge;
