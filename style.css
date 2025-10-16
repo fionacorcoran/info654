@@ -98,6 +98,8 @@ caption {
                0 0 30px #4AAA39;
     border-style: ridge;
     border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
     }
 .glow_text {
   color: #BB01FF;
