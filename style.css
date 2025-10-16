@@ -86,7 +86,19 @@ caption {
     box-shadow: 0 0 25px 5px #1400FF;
     border-style: ridge;
     border-radius: 10%;
-    }   
+    }  
+.main_image {
+    max-width: 100%;
+    height: auto;
+    border: 15px;
+    border-color:#26FF00; 
+    box-shadow: 0 0 5px #3ED523,
+               0 0 10px #3ED523,
+               0 0 20px #4AAA39,
+               0 0 30px #4AAA39;
+    border-style: ridge;
+    border-radius: 10%;
+    }
 .glow_text {
   color: #BB01FF;
   text-shadow: 0 0 5px #6800FF,
