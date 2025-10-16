@@ -88,6 +88,8 @@ caption {
     border-radius: 10%;
     }  
 .main_image {
+    display: block;
+    margin: auto;
     max-width: 100%;
     height: auto;
     border: 15px;
@@ -98,8 +100,6 @@ caption {
                0 0 30px #4AAA39;
     border-style: ridge;
     border-radius: 10%;
-    margin-left: auto;
-    margin-right: auto;
     }
 .glow_text {
   color: #BB01FF;
