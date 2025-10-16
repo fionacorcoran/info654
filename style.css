@@ -90,9 +90,8 @@ caption {
 .main_image {
     display: block;
     margin: auto;
-    max-width: 100%;
-    height: auto;
-    border: 15px;
+    width: auto;
+    border: 10px;
     border-color:#26FF00; 
     box-shadow: 0 0 5px #3ED523,
                0 0 10px #3ED523,
