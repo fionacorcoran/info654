@@ -5,11 +5,16 @@
         <title>TK</title>
     </head> 
     <body>
+        <div id = "shining">
+            <p>placeholder</p>
+        </div>
         <script>
             let line = "<font face='Courier New'>All work and no play makes Jack a dull boy<br></font>";
+            let paragraph = ""
                 for (count = 1; count <= 50; count++) {
-                    document.write(line);
-                }
+                    paragraph = paragraph + line;} 
+                    document.getElementsByTagName("p").innerHTML = paragraph;
+                
         </script>
     </body> 
 </html>
