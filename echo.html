@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <title>TK</title>
+        <script>
+        function numberEcho() {
+            let n = document.getElementById("numberbox").value;
+            document.getElementById("output").innerHTML = `You thought that ${n} was a good number :/`;
+        }
+        </script>
+    </head> 
+    <body>
+        <label for="numberbox">Your number here:</label>
+        <input id ="numberbox" type="number"><br><br>
+        <button type "button" onclick = "numberEcho()">Is it a good one?</button>
+        <h2 id="output"></h2>
+    </body> 
+</html>
