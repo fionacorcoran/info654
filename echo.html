@@ -6,7 +6,11 @@
         <script>
         function numberEcho() {
             let n = document.getElementById("numberbox").value;
+            if (n=6) {
+            document.getElementById("output").innerHTML = `You have correctly identified that ${n} is the best number.`;    
+            } else {
             document.getElementById("output").innerHTML = `You thought that ${n} was a good number :/`;
+            }
         }
         </script>
     </head> 
