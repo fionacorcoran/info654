@@ -5,10 +5,12 @@
         <title>TK</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
+        function tipFunction {
             let x = document.getElementById("cost").value;
             let y = document.getElementById("percent").value;
             let tip= x*y;
-            document.getElementById("output").innerHTML = `Tip Amount:$${tip}`;
+            document.getElementById("output").innerHTML =`Tip Amount: $${tip}`;
+        }
         </script>
     </head> 
     <body>
