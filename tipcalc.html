@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <title>TK</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            let x = document.getElementById("cost").value;
+            let y = document.getElementById("percent").value;
+            let tip_amount = x * y;
+            document.getElementById("output_tip_amount").innerHTML = `Tip Amount:$${tip_amount}`;
+        </script>
+    </head> 
+    <body>
+        <label for="cost">Cost:</label>
+        <input id= "cost" type="number"><br>
+        <label for="percent">Tip Amount:</label>
+        <input id="percent" type="number" step=".01">
+        <button type="button" onclick="tipFunction()">Calculate tip</button>
+        <p id=”output_tip_amount”></p>
+    </body> 
+</html>
