@@ -8,7 +8,7 @@
             let x = document.getElementById("cost").value;
             let y = document.getElementById("percent").value;
             let tip= x*y;
-            document.getElementById("output_tip_amount").innerHTML = `Tip Amount:$${tip}`;
+            document.getElementById("output").innerHTML = `Tip Amount:$${tip}`;
         </script>
     </head> 
     <body>
@@ -17,6 +17,6 @@
         <label for="percent">Tip Percentage:</label>
         <input id="percent" type="number" step=".01">
         <button type="button" onclick="tipFunction()">Calculate Tip Amount</button>
-        <h2 id=”output_tip_amount”></h2>
+        <h2 id=”output”></h2>
     </body> 
 </html>
