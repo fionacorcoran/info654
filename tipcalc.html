@@ -4,15 +4,6 @@
         <meta charset="UTF-8">
         <title>TK</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-        function tipFunction() {
-            let x = document.getElementById("cost").value;
-            let y = document.getElementById("percent").value;
-            let tip= (x*y)/100;
-            text = "Tip Amount: $" + tip;
-            document.getElementById("output").innerHTML = text;
-        }
-        </script>
     </head> 
     <body>
         <label for="cost">Cost:</label>
@@ -21,5 +12,14 @@
         <input id="percent" type="number" step=".01">
         <button type="button" onclick="tipFunction()">Calculate Tip Amount</button>
         <h2 id=”output”></h2>
+    <script>
+        function tipFunction() {
+            let x = document.getElementById("cost").value;
+            let y = document.getElementById("percent").value;
+            let tip= (x*y)/100;
+            text = "Tip Amount: $" + tip;
+            document.getElementById("output").innerHTML = text;
+        }
+        </script>
     </body> 
 </html>
