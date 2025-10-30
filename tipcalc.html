@@ -8,7 +8,7 @@
         function tipFunction() {
             let x = document.getElementById("cost").value;
             let y = document.getElementById("percent").value;
-            let tip= x*y;
+            let tip= (x*y)/100;
             document.getElementById("output").innerHTML =`Tip Amount: $${tip}`;
         }
         </script>
