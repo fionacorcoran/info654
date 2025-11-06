@@ -9,13 +9,8 @@
             const APP_TOKEN = "EuUJxbkjULlp0gbbri4FLO9hK"
             async function fetchTreeReport () {
               const neighborhood = document.getElementById('neighborhood').value;
-              const soqlQuery = `
-              SELECT spc_common AS tree_type, COUNT(*) AS quantity
-              WHERE nta_name = '${neighborhood}'
-              GROUP BY spc_common
-              ORDER BY quantity DESC
-              `;
-              const url = `https://data.cityofnewyork.us/api/v3/views/uvpi-gqnh/query.json?pageNumber=1&pageSize=10&app_token=${APP_TOKEN}&query=${encodeURIComponent(soqlQuery)}`;
+              const soqlQuery = `SELECT spc_common AS tree_type, COUNT(*) AS quantity WHERE nta_name='${neighborhood}' GROUP BY spc_common ORDER BY quantity DESC`;
+              const url = `https://data.cityofnewyork.us/api/v3/views/uvpi-gqnh/query.json?pageNumber=1&pageSize=100&app_token=${APP_TOKEN}&query=${encodeURIComponent(soqlQuery)}`;
               const response = await fetch(url);
               const json = await response.json();
               const results = document.getElementById('results');
