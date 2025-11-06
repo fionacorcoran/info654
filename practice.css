@@ -19,6 +19,11 @@
 	padding: 0px 10px 0px 10px ;
     margin: 20px 0;
 }
+.tree-report {
+    margin: auto;
+    
+}
+
 @keyframes marquee-content {
 	from {
 		transform: translateX( 0% );
