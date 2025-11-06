@@ -6,7 +6,7 @@
     padding: 10px 0;
 }
 .marquee-scroll {
-    animation-duration: 4s ;
+    animation-duration: 20s ;
 	animation-iteration-count: infinite ;
 	animation-name: marquee-content ;
 	animation-timing-function: linear ;
