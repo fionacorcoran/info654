@@ -3,7 +3,7 @@ h2 {
     color: #365E41;
 }
 p {
-    font-family: monospace;
+    /* font-family: monospace; */
 }
 .marquee {
     width: 100%; 
@@ -33,7 +33,6 @@ p {
     margin-bottom: 10px;
     padding: 10px;
     border: 3px solid #365E41;
-
 }
 .dropdown-menu {
     max-width: 200px;
