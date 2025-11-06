@@ -2,7 +2,9 @@ h2 {
     font-family: new-spirit-condensed;
     color: #365E41;
 }
-
+p {
+    font-family: monospace;
+}
 .marquee {
     width: 100%; 
     border-width: 7px 0px;
