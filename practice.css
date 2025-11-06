@@ -1,6 +1,6 @@
 .marquee {
     width: 100%; 
-    border: 10px 0px 10px 0px;
+    border-width: 10px 0px 10px 0px;
     border-style: solid;
     border-color: #365E41;
     display: flex;
