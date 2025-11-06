@@ -77,7 +77,7 @@
                 return;
             }
 
-            const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=spc_common,count(*) as quantity&$where=nta_name='${neighborhood}'&$group=spc_common&$order=quantity DESC&$$app_token=${APP_TOKEN}`;
+            const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=spc_common,count(*) as quantity&$where=nta_name='${neighborhood}'&$group=spc_common&$order=quantity DESC&$limit=10&$$app_token=${APP_TOKEN}`;
 
             try {
             const response = await fetch(url);
