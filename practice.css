@@ -1,6 +1,6 @@
 .marquee {
     width: 100%; 
-    border: 2px solid #365E41;
+    border: 10px 0px 10px 0px solid #365E41;
     display: flex;
     overflow: hidden;
     white-space: nowrap;
