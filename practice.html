@@ -8,14 +8,22 @@
         <script>
             async function fetchTreeReport () {
               const neighborhood = document.getElementById("neighborhood").value;
-              const url = `https://data.cityofnewyork.us/api/v3/views/uvpi-gqnh/query.json?pageNumber=1&pageSize=10&app_token=EuUJxbkjULlp0gbbri4FLO9hK&$select=spc_common,count(*) as quantity&$where=nta_name='${neighborhood}'&$group=spc_common&$order=quantity DESC`;
+              const soqlQuery = `
+              SELECT spc_common AS tree_type, COUNT(*) AS quantity
+              WHERE nta_name = '${neighborhood}'
+              GROUP BY spc_common
+              ORDER BY quantity DESC
+              `;
+              const url = `https://data.cityofnewyork.us/api/v3/views/uvpi-gqnh/query.json?pageNumber=1&pageSize=10&app_token=EuUJxbkjULlp0gbbri4FLO9hK&query=${encodeURIComponent(soqlQuery)}`;
               const response = await fetch(url);
               const jsonData = await response.json();
               const results = document.getElementById("results");
               results.innerHTML = "";
-              data.forEach(item => {
+              (json.data || []).forEach (row => {
+                const treeType = row.rowData[0] || "Unknown";
+                const quantity = row.rowData[1];
                 const li = document.createElement("li");
-                li.textContent = `${item.spc_common || "Unknown"}: ${item.quantity}`;
+                li.textContent = `${treeType}: ${quantity}`;
                 results.appendChild(li);
               });
             }
