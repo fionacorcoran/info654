@@ -48,8 +48,6 @@
                     return;
                 }
 
-                const soqlQuery = `SELECT spc_common AS tree_type, COUNT(*) AS quantity WHERE nta_name='${neighborhood}' GROUP BY spc_common ORDER BY quantity DESC`;
-
                 const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=spc_common,count(*) as quantity&$where=nta_name='${neighborhood}'&$group=spc_common&$order=quantity DESC&$$app_token=${APP_TOKEN}`;
 
                 try {
