@@ -37,41 +37,41 @@
         </script> -->
         <script>
             const APP_TOKEN = "EuUJxbkjULlp0gbbri4FLO9hK";
-
             async function fetchTreeReport() {
-                const neighborhood = document.getElementById('neighborhood').value.trim();
-                const results = document.getElementById('results');
-                results.innerHTML = "";
+                const dropdown = document.getElementById('neighborhood');
+  const neighborhood = dropdown.value.trim();
+  const results = document.getElementById('results');
+  results.innerHTML = "";
 
-                if (!neighborhood) {
-                    alert("Please enter a neighborhood name!");
-                    return;
-                }
+  if (!neighborhood) {
+    alert("Please select a neighborhood!");
+    return;
+  }
 
-                const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=spc_common,count(*) as quantity&$where=nta_name='${neighborhood}'&$group=spc_common&$order=quantity DESC&$$app_token=${APP_TOKEN}`;
+  const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=spc_common,count(*) as quantity&$where=nta_name='${neighborhood}'&$group=spc_common&$order=quantity DESC&$$app_token=${APP_TOKEN}`;
 
-                try {
-                    const response = await fetch(url);
-                    const json = await response.json();
+  try {
+    const response = await fetch(url);
+    const json = await response.json();
 
-                if (!json.data) {
-                    results.innerHTML = "<li>No results found or query error.</li>";
-                    console.error(json);
-                    return;
-                }
+    if (!json.length) {
+      results.innerHTML = "<li>No results found for this neighborhood.</li>";
+      return;
+    }
 
-                json.data.forEach(row => {
-                const treeType = row.rowData[0] || "Unknown";
-                const quantity = row.rowData[1];
-                const li = document.createElement('li');
-                li.textContent = `${treeType}: ${quantity}`;
-                results.appendChild(li);
-                });
-            } catch (err) {
-                console.error("Fetch error:", err);
-                results.innerHTML = "<li>Error fetching data.</li>";
-            }
-         }
+    json.forEach(row => {
+      const treeType = row.spc_common || "Unknown";
+      const quantity = row.quantity;
+      const li = document.createElement('li');
+      li.textContent = `${treeType}: ${quantity}`;
+      results.appendChild(li);
+    });
+  } catch (err) {
+    console.error("Fetch error:", err);
+    results.innerHTML = "<li>Error fetching data.</li>";
+  }
+}
+
          </script>
     </head> 
     <body>
