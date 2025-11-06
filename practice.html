@@ -37,49 +37,80 @@
         </script> -->
         <script>
             const APP_TOKEN = "EuUJxbkjULlp0gbbri4FLO9hK";
+            // Neighborhood dropdown menu
+            async function loadNeighborhoods() {
+                const dropdown = document.getElementById('neighborhood');
+                dropdown.innerHTML = "<option>Loading...</option>";
+
+                const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=distinct nta_name&$order=nta_name&$$app_token=${APP_TOKEN}`;
+
+                try {
+                const response = await fetch(url);
+                const json = await response.json();
+
+                dropdown.innerHTML = "<option value=''>-- Select a Neighborhood --</option>";
+
+                json.forEach(row => {
+                    const neighborhood = row.nta_name;
+                    if (neighborhood) {
+                    const option = document.createElement('option');
+                    option.value = neighborhood;
+                    option.textContent = neighborhood;
+                    dropdown.appendChild(option);
+                    }
+                });
+            } catch (err) {
+            console.error("Error loading neighborhoods:", err);
+            dropdown.innerHTML = "<option>Error loading data</option>";
+            }
+            }
+            
+            // Generates neighborhood tree report
             async function fetchTreeReport() {
                 const dropdown = document.getElementById('neighborhood');
-  const neighborhood = dropdown.value.trim();
-  const results = document.getElementById('results');
-  results.innerHTML = "";
+                const neighborhood = dropdown.value.trim();
+                const results = document.getElementById('results');
+                results.innerHTML = "";
 
-  if (!neighborhood) {
-    alert("Please select a neighborhood!");
-    return;
-  }
+            if (!neighborhood) {
+                alert("Please select a neighborhood!");
+                return;
+            }
 
-  const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=spc_common,count(*) as quantity&$where=nta_name='${neighborhood}'&$group=spc_common&$order=quantity DESC&$$app_token=${APP_TOKEN}`;
+            const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=spc_common,count(*) as quantity&$where=nta_name='${neighborhood}'&$group=spc_common&$order=quantity DESC&$$app_token=${APP_TOKEN}`;
 
-  try {
-    const response = await fetch(url);
-    const json = await response.json();
+            try {
+            const response = await fetch(url);
+            const json = await response.json();
 
-    if (!json.length) {
-      results.innerHTML = "<li>No results found for this neighborhood.</li>";
-      return;
-    }
+            if (!json.length) {
+            results.innerHTML = "<li>No results found for this neighborhood.</li>";
+            return;
+            }
 
-    json.forEach(row => {
-      const treeType = row.spc_common || "Unknown";
-      const quantity = row.quantity;
-      const li = document.createElement('li');
-      li.textContent = `${treeType}: ${quantity}`;
-      results.appendChild(li);
-    });
-  } catch (err) {
-    console.error("Fetch error:", err);
-    results.innerHTML = "<li>Error fetching data.</li>";
-  }
-}
-
+            json.forEach(row => {
+                const treeType = row.spc_common || "Unknown";
+                const quantity = row.quantity;
+                const li = document.createElement('li');
+                li.textContent = `${treeType}: ${quantity}`;
+                results.appendChild(li);
+            });
+            } catch (err) {
+            console.error("Fetch error:", err);
+            results.innerHTML = "<li>Error fetching data.</li>";
+            }
+        }
+        window.onload = loadNeighborhoods;
          </script>
     </head> 
     <body>
         <div>
             <h2>🌳 NYC Tree Census - 2015 Neighborhood Report</h2>
-            <p>Enter a neighborhood name (e.g., <b>Astoria</b>, <b>Harlem</b>, <b>Park Slope</b>)</p>
+            <p>Select a neighborhood to see its tree species and counts.</p>
             
-            <input id="neighborhood" type="text" placeholder="e.g. Astoria" />
+            <select id="neighborhood">
+                <option value="">Loading neighborhoods...</option>
+            </select>
             <button onclick="fetchTreeReport()">Get Tree Report</button>
             
             <ul id="results"></ul>
