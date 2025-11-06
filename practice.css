@@ -8,7 +8,7 @@
     white-space: nowrap;
     background-color: white;
     color: #365E41;
-    font-family: new-spirit-bold,times;
+    font-family: new-spirit-condensed,times;
     font-size: 40px;
 }
 .marquee-scroll {
@@ -28,6 +28,6 @@
 		}
 }
 @font-face {
-  font-family: new-spirit-bold; 
-  src: url(new-spirit-bold.otf); 
+  font-family: new-spirit-condensed; 
+  src: url(new-spirit-condensed.otf); 
     }
