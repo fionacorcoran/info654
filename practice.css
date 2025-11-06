@@ -1,7 +1,9 @@
 .marquee {
     width: 100%; 
     border: 2px solid green;
+    display: flex;
     overflow: hidden;
+    white-space: nowrap
     background-color: #f0f0f0;
     padding: 10px 0;
 }
