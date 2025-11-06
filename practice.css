@@ -20,8 +20,9 @@
     margin: 20px 0;
 }
 .tree-report {
+    width: 50%;
     margin: auto;
-    
+
 }
 
 @keyframes marquee-content {
