@@ -3,7 +3,10 @@ h2 {
     color: #365E41;
 }
 p {
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
+}
+ul {
+    font-family:'Courier New', Courier, monospace;
 }
 .marquee {
     width: 100%; 
