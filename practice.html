@@ -5,8 +5,30 @@
         <title>Tree Census</title>
         <link rel="stylesheet" type="text/css" href="practice.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            async function fetchTreeReport () {
+              const neighborhood = document.getElementById("neighborhood").value;
+              const url = `https://data.cityofnewyork.us/api/v3/views/uvpi-gqnh/query.json?pageNumber=1&pageSize=10&app_token=EuUJxbkjULlp0gbbri4FLO9hK&$select=spc_common,count(*) as quantity&$where=nta_name='${neighborhood}'&$group=spc_common&$order=quantity DESC`;
+              const response = await fetch(url);
+              const jsonData = await response.json();
+              const results = document.getElementById("results");
+              results.innerHTML = "";
+              data.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.spc_common || "Unknown"}: ${item.quantity}`;
+                results.appendChild(li);
+              });
+            }
+        </script>
     </head> 
     <body>
+        <div>
+            <h2>Neighborhood Tree Report</h2>
+            <label for="neighborhood">Enter Neighborhood:</label>
+            <input id="neighborhood" placeholder="e.g. Crown Heights">
+            <button onclick="fetchTreeReport()">Search</button>
+            <ul id="results"></ul>
+        </div>
         <div class ="marquee">
             <p class ="marquee-scroll"><b>THE 2025 TREE CENSUS IS UNDERWAY!&nbsp;&nbsp;&nbsp;HAVE YOUR TREES BEEN COUNTED?</b></p>
             <p class ="marquee-scroll"><b>THE 2025 TREE CENSUS IS UNDERWAY!&nbsp;&nbsp;&nbsp;HAVE YOUR TREES BEEN COUNTED?</b></p>
