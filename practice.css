@@ -28,6 +28,9 @@
     border: 3px solid #365E41;
 
 }
+.dropdown-menu {
+    max-width: 100px;
+}
 
 @keyframes marquee-content {
 	from {
