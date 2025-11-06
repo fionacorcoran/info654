@@ -83,16 +83,16 @@
             const response = await fetch(url);
             const json = await response.json();
 
-            if (!json.length) {
-            results.innerHTML = "<li>No results found for this neighborhood.</li>";
-            return;
+            const identifiedTrees = json.filter(row => row.spc_common && row.spc_common.toLowerCase() !== "unknown");
+
+            if (!identifiedTrees.length) {
+                results.innerHTML = "<li>No results found.</li>";
+                return;
             }
 
-            json.forEach(row => {
-                const treeType = row.spc_common || "Unknown";
-                const quantity = row.quantity;
+            identifiedTrees.forEach(row => {
                 const li = document.createElement('li');
-                li.textContent = `${treeType}: ${quantity}`;
+                li.textContent = `${row.spc_common}: ${row.quantity}`;
                 results.appendChild(li);
             });
             } catch (err) {
