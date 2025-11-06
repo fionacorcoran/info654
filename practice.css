@@ -15,7 +15,6 @@ p {
     white-space: nowrap;
     background-color: white;
     color: #365E41;
-    font-family: new-spirit-condensed,times;
     font-size: 50px;
 }
 .marquee-scroll {
@@ -25,6 +24,7 @@ p {
 	animation-timing-function: linear ;
 	padding: 0px 10px 0px 10px ;
     margin: 20px 0;
+    font-family: new-spirit-condensed,times;
 }
 #tree-report {
     width: 50%;
