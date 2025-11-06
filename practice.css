@@ -4,9 +4,10 @@
     display: flex;
     overflow: hidden;
     white-space: nowrap;
-    color: #365E41;
     background-color: white;
     padding: 10px 0;
+    color: #365E41;
+    font-size: large;
 }
 .marquee-scroll {
     animation-duration: 20s ;
