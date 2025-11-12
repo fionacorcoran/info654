@@ -18,7 +18,7 @@
                 const response = await fetch(url);
                 const json = await response.json();
 
-                dropdown.innerHTML = "<option value=''>-- Select a Neighborhood --</option>";
+                dropdown.innerHTML = "<option value=''>Select a Neighborhood</option>";
 
                 json.forEach(row => {
                     const neighborhood = row.nta_name;
