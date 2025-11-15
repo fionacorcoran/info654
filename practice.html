@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             const APP_TOKEN = "EuUJxbkjULlp0gbbri4FLO9hK";
-            // Neighborhood dropdown menu
+            // Neighborhood dropdown menu for tree-report
             async function loadNeighborhoods() {
                 const dropdown = document.getElementById('neighborhood');
                 dropdown.innerHTML = "<option>Loading...</option>";
@@ -34,7 +34,33 @@
             dropdown.innerHTML = "<option>Error loading data</option>";
             }
             }
-            
+            // Neighborhood dropdown menu for change-report
+            async function loadNeighborhoods() {
+                const dropdown = document.getElementById('neighborhood2');
+                dropdown.innerHTML = "<option>Loading...</option>";
+
+                const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=distinct nta_name&$order=nta_name&$$app_token=${APP_TOKEN}`;
+
+                try {
+                const response = await fetch(url);
+                const json = await response.json();
+
+                dropdown.innerHTML = "<option value=''>Select a Neighborhood</option>";
+
+                json.forEach(row => {
+                    const neighborhood = row.nta_name;
+                    if (neighborhood) {
+                    const option = document.createElement('option');
+                    option.value = neighborhood;
+                    option.textContent = neighborhood;
+                    dropdown.appendChild(option);
+                    }
+                });
+            } catch (err) {
+            console.error("Error loading neighborhoods:", err);
+            dropdown.innerHTML = "<option>Error loading data</option>";
+            }
+            }
             // Generates neighborhood tree report
             async function fetchTreeReport() {
                 const dropdown = document.getElementById('neighborhood');
