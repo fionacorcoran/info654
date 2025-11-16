@@ -48,8 +48,8 @@
                 const json2015 = await response2015.json();
                 const json2005 = await response2005.json();
                 
-                const total2015 = json2015?.[0]?.total2015 ?? 0;
-                const total2005 = json2005?.[0]?.total2005 ?? 0;
+                const total2015 = json2015?.[0]?.total2015 || 0;
+                const total2005 = json2005?.[0]?.total2005 || 0;
                 
                 //Calculate change in # of trees
                 const change = total2015 - total2005;
