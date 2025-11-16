@@ -34,33 +34,6 @@
             dropdown.innerHTML = "<option>Error loading data</option>";
             }
             }
-            // Neighborhood dropdown menu for change-report
-            async function loadNeighborhoods() {
-                const dropdown = document.getElementById('neighborhood2');
-                dropdown.innerHTML = "<option>Loading...</option>";
-
-                const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=distinct nta_name&$order=nta_name&$$app_token=${APP_TOKEN}`;
-
-                try {
-                const response = await fetch(url);
-                const json = await response.json();
-
-                dropdown.innerHTML = "<option value=''>Select a Neighborhood</option>";
-
-                json.forEach(row => {
-                    const neighborhood = row.nta_name;
-                    if (neighborhood) {
-                    const option = document.createElement('option');
-                    option.value = neighborhood;
-                    option.textContent = neighborhood;
-                    dropdown.appendChild(option);
-                    }
-                });
-            } catch (err) {
-            console.error("Error loading neighborhoods:", err);
-            dropdown.innerHTML = "<option>Error loading data</option>";
-            }
-            }
             // Generates neighborhood tree report
             async function fetchTreeReport() {
                 const dropdown = document.getElementById('neighborhood');
@@ -100,17 +73,6 @@
          </script>
     </head> 
     <body>
-        <div id="tree-report">
-            <h2>Growing New Leaves or Watching Them Fall?</h2>
-            <p>Select a neighborhood to see if it gained or lost trees between 2005 and 2015</p>
-            
-            <select id="neighborhood2" class="dropdown-menu">
-                <option value="">Loading neighborhoods...</option>
-            </select>
-            <button onclick="fetchChangeReport()">Get Tree Report</button>
-            
-            <ul id="change-results"></ul>
-        </div>
         <div id="tree-report">
             <h2>NYC Neighborhood Tree Report (2015 Census Data)</h2>
             <p>Select a neighborhood to see its top 20 most common tree species and counts.</p>
