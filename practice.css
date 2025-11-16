@@ -17,11 +17,11 @@ a {
 }
 label {
     font-family: new-spirit-condensed;
-    background-color: #365E41;
-    color: white;
+    color: #365E41;
 }
 button {
-    color: #365E41;
+    background-color: #365E41;
+    color: white;
 }
 .marquee {
     width: 100%; 
