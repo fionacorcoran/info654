@@ -31,7 +31,7 @@
                 });
             } catch (err) {
             console.error("Error loading neighborhoods:", err);
-            dropdown.innerHTML = "<option>Error loading data</option>";
+            dropdown.innerHTML = "<option>Error fetching neighborhood data. Sorry, we're stumped!</option>";
             }
             }
         // Fetch total number of trees per neighborhood
@@ -61,7 +61,7 @@
 
             } catch (err) {
                 console.error("Error fetching data:", err);
-                totalResult.innerHTML = "Error fetching total tree count.";
+                totalResult.innerHTML = "Error fetching total tree count. Sorry, we're stumped!";
             }
         }
             // Fetch top 20 trees per neighborhood
