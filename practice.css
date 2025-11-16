@@ -26,6 +26,11 @@ button {
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
 }
+.green-text {
+    color: #365E41;
+    font-family: new-spirit-condensed;
+    font-weight: bold;
+}
 .marquee {
     width: 100%; 
     border-width: 7px 0px;
