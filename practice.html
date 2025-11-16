@@ -108,11 +108,11 @@
             "Douglas fir": 44.1,"Larch": 32.8,"Fir": 21.9,"Spruce": 19.4,"Oak": 17.4,"Beech": 17.4,"Pine": 14.7
         };
         function calculateCO2() {
-            const species = document.getElementById('treeMenu').value;
-            const count = parseInt(document.getElementById("treeNumber").value);
+            const species = document.getElementById('tree-menu').value;
+            const count = parseInt(document.getElementById("tree-number").value);
 
             const totalKg = co2PerYear[species] * count;
-            document.getElementById('absorbResult').innerText = `Total CO2 absorbed per year: ${totalKg.toFixed(2)} kg`;
+            document.getElementById('absorb-result').innerText = `Total CO2 absorbed per year: ${totalKg.toFixed(2)} kg`;
         }
 
          </script>
@@ -133,8 +133,8 @@
         <div class="tree-report">
             <h2>How much CO<sub>2</sub> can a tree absorb per year?</h2>
             <p>Choose one of 7 common tree species to see how much CO<sub>2</sub> it absorbs in a year! Absorption data from <a href="https://www.fortomorrow.eu/en/blog/co2-tree">ForTomorrow</a>.</p>
-            <label for="treeMenu">Species:</label>
-            <select id="treeMenu">
+            <label for="tree-menu">Species:</label>
+            <select id="tree-menu">
                 <option value="Douglas fir">Douglas fir</option>
                 <option value="Larch">Larch</option>
                 <option value="Fir">Fir</option>
@@ -146,14 +146,14 @@
 
             <br><br>
 
-            <label for="treeNumber">Number of trees:</label>
-            <input type="number" id="treeNumber" min="1" max="9999" value="1"></input>
+            <label for="tree-number">Number of trees:</label>
+            <input type="number" id="tree-number" min="1" max="9999" value="1"></input>
 
             <br><br>
 
             <button onclick="calculateCO2()">Calculate CO<sub>2</sub> Absorption</button>
 
-            <h3 id="absorbResult"></h3>
+            <h3 id="absorb-result"></h3>
         </div>
         <div class ="marquee">
             <p class ="marquee-scroll"><b>THE 2025 TREE CENSUS IS UNDERWAY!&nbsp;&nbsp;&nbsp;HAVE YOUR TREES BEEN COUNTED?</b></p>
