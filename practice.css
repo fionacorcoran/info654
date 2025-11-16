@@ -13,7 +13,8 @@ ul {
     font-family:'Courier New', Courier, monospace;
 }
 a {
-   color: #365E41;  
+    font-family: new-spirit-condensed;
+    color: #365E41;  
 }
 .marquee {
     width: 100%; 
