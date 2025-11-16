@@ -52,7 +52,7 @@ button {
     margin: 20px 0;
     font-family: new-spirit-condensed,times;
 }
-#tree-report {
+.tree-report {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
