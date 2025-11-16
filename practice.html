@@ -54,10 +54,10 @@
                 //Calculate change in # of trees
                 const change = total2015 - total2005;
 
-                totalResult.innerHTML = `<b><span class="green-text">Total trees in ${neighborhood}:</b></span><br>
-                <b>2015 Census:</b> ${total2015}<br>
-                <b>2005 Census:</b> ${total2005}<br>
-                <b>Change over time:</b> ${change} trees`;
+                totalResult.innerHTML = `<span class="green-text">Total trees in ${neighborhood}:</span><br>
+                <span class="green-text">2015 Census:</span> ${total2015}<br>
+                <span class="green-text">2005 Census:</span> ${total2005}<br>
+                <span class="green-text">Change over time:</span> ${change} trees`;
 
             } catch (err) {
                 console.error("Error fetching data:", err);
