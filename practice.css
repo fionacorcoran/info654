@@ -22,7 +22,7 @@ label {
 button {
     background-color: #365E41;
     color: white;
-    border-radius: 5px;
+    border-radius: 10%;
     font-family: 'Courier New', Courier, monospace;
 }
 .marquee {
