@@ -12,6 +12,9 @@ p {
 ul {
     font-family:'Courier New', Courier, monospace;
 }
+a {
+   color: #365E41;  
+}
 .marquee {
     width: 100%; 
     border-width: 7px 0px;
