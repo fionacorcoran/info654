@@ -102,6 +102,25 @@
             }
         }
         window.onload = loadNeighborhoods;
+
+        //Calculates amount of CO2 absorbed by trees per year in kg
+        const co2PerYear = {
+            "Douglas fir": 44.1,
+            "Larch": 32.8,
+            "Fir": 21.9,
+            "Spruce": 19.4,
+            "Oak": 17.4,
+            "Beech": 17.4,
+            "Pine": 14.7
+        };
+        function calculateCO2() {
+            const species = document.getElementById('treeMenu').value;
+            const count = document.getElementById("treeNumber").value;
+
+            const totalKg = co2PerYear[species] * count;
+            document.getElementByID(absorbResult).innerText = `Total CO2 absorbed per year: ${totalKg.toFixed(2)} kg`;
+        }
+
          </script>
     </head> 
     <body>
@@ -116,6 +135,30 @@
             
             <ul id="results"></ul>
             <p id="tree-count"></p>
+        </div>
+        <div>
+            <h2>How much CO2 can a tree absorb per year?</h2>
+            <label for="treeMenu">Select tree species:</label>
+            <select id="treeMenu">
+                <option value="Douglas fir">Douglas fir</option>
+                <option value="Larch">Larch</option>
+                <option value="Fir">Fir</option>
+                <option value="Spruce">Spruce</option>
+                <option value="Oak">Oak</option>
+                <option value="Beech">Beech</option>
+                <option value="Pine">Pine</option>
+            </select>
+
+            <br><br>
+
+            <label for="treeNumber">Number of trees:</label>
+            <input type="number" id="treeNumber" min="1" value="1"></input>
+
+            <br><br>
+
+            <button onclick="calculateCO2()">Calculate CO2 Absorption</button>
+
+            <h3 id="absorbResult"></h3>
         </div>
         <div class ="marquee">
             <p class ="marquee-scroll"><b>THE 2025 TREE CENSUS IS UNDERWAY!&nbsp;&nbsp;&nbsp;HAVE YOUR TREES BEEN COUNTED?</b></p>
