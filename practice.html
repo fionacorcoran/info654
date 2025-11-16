@@ -40,7 +40,7 @@
             totalResult.innerHTML ="";
 
             const url2015 = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=count(tree_id) as total2015&$where=nta_name='${neighborhood}'&$$app_token=${APP_TOKEN}`;
-            const url2005 = `https://data.cityofnewyork.us/resource/29bw-z7pj.json?$select=count(tree_id) as total2005&$where=nta_name='${neighborhood}'&$$app_token=${APP_TOKEN}`;
+            const url2005 = `https://data.cityofnewyork.us/resource/29bw-z7pj.json?$select=count(tree_dbh) as total2005&$where=nta_name='${neighborhood}'&$$app_token=${APP_TOKEN}`;
             try {
                 const [response2015, response2005] = await Promise.all([
                     fetch(url2015), fetch(url2005)
@@ -58,7 +58,7 @@
                 <b>2015 Census:</b> ${total2015}<br>
                 <b>2005 Census:</b> ${total2005}<br>
                 <b>Change over time:</b> ${change}`;
-                
+
             } catch (err) {
                 console.error("Error fetching data:", err);
                 totalResult.innerHTML = "Error fetching total tree count.";
