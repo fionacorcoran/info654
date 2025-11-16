@@ -15,6 +15,10 @@ ul {
 a {
     color: #365E41;  
 }
+label {
+    font-family: new-spirit-condensed;
+    color: #365E41;
+}
 .marquee {
     width: 100%; 
     border-width: 7px 0px;
