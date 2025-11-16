@@ -46,7 +46,7 @@
                 const json = await response.json();
                 const total = json && json[0] ? json[0].total : 0;
 
-                totalResult.innerHTML = `Total trees in ${neighborhood}: ${total}`;
+                totalResult.innerHTML = `<b>Total trees in ${neighborhood}:</b> ${total}`;
             } catch (err) {
                 console.error("Error fetching data:", err);
                 totalResult.innerHTML = "Error fetching total tree count.";
