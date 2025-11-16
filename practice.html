@@ -36,7 +36,7 @@
             }
         // Fetch total number of trees per neighborhood
         async function fetchTreeCount (neighborhood) {
-            const totalResult = document.getElementByID('tree-count');
+            const totalResult = document.getElementById('tree-count');
             totalResult.innerHTML ="";
 
             const url = `https://data.cityofnewyork.us/resource/uvpi-gqnh.json?$select=count(tree_id) as total&$where=nta_name='${neighborhood}'&$$app_token=${APP_TOKEN}`;
@@ -44,6 +44,7 @@
             try {
                 const response = await fetch(url);
                 const json = await response.json();
+                const total = json && json[0] ? json[0].total : 0;
 
                 totalResult.innerHTML = `Total trees in ${neighborhood}: ${total}`;
             } catch (err) {
@@ -102,7 +103,7 @@
             <button onclick="fetchTreeReport()">Get Tree Report</button>
             
             <ul id="results"></ul>
-            <p id="tree-count"></p></p>
+            <p id="tree-count"></p>
         </div>
         <div class ="marquee">
             <p class ="marquee-scroll"><b>THE 2025 TREE CENSUS IS UNDERWAY!&nbsp;&nbsp;&nbsp;HAVE YOUR TREES BEEN COUNTED?</b></p>
