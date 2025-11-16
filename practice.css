@@ -23,6 +23,7 @@ button {
     background-color: #365E41;
     color: white;
     border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .marquee {
     width: 100%; 
