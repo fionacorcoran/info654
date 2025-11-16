@@ -84,13 +84,13 @@
             const response = await fetch(url);
             const json = await response.json();
 
-            const identifiedTrees = json.filter(row => row.spc_common && row.spc_common.toLowerCase() !== "unknown");
+            const nonzeroTrees = json.filter(row => row.spc_common && row.spc_common.toLowerCase() !== "unknown");
 
-            if (!identifiedTrees.length) {
+            if (!nonzeroTrees.length) {
                 results.innerHTML = "<li>No results found.</li>";
                 return;
             } else {
-            identifiedTrees.forEach(row => {
+            nonzeroTrees.forEach(row => {
                 const li = document.createElement('li');
                 li.textContent = `${row.spc_common}: ${row.quantity}`;
                 results.appendChild(li);
