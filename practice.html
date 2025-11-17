@@ -8,7 +8,7 @@
         <script>
             const APP_TOKEN = "EuUJxbkjULlp0gbbri4FLO9hK";
             // Neighborhood dropdown menu for tree-report
-            async function loadNeighborhoods() {
+            async function loadNeighborhoodDropdown() {
                 const dropdown = document.getElementById('neighborhood');
                 dropdown.innerHTML = "<option>Loading...</option>";
 
@@ -101,7 +101,7 @@
             results.innerHTML = "<li>Error fetching data. Sorry, we're stumped!</li>";
             }
         }
-        window.onload = loadNeighborhoods;
+        window.onload = loadNeighborhoodDropdown;
 
         //Calculates amount of CO2 absorbed by trees per year in kg
         const co2PerYear = {
